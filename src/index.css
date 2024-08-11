@@ -64,6 +64,19 @@ canvas {
   .link {
     @apply text-black hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
   }
+  .inputSearch {
+    position: absolute;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    color: black;
+  }
+  .inputSearch.active {
+    position: relative;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 4px;
+  }
   .video-carousel_container {
     @apply relative sm:w-[70vw] w-[88vw] md:h-[73vh] sm:h-[60vh] h-[60vh];
     box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.6);
