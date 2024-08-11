@@ -8,6 +8,10 @@ import pause from "/public/images/pause.svg";
 import hero1 from "/public/videos/norway.mp4";
 import hero2 from "/public/videos/smallHeroVideo.mp4";
 
+import facebook from "/public/images/facebook.svg";
+import instagram from "/public/images/instagram.svg";
+import youtube from "/public/images/youtube.svg";
+
 export const worldImg = world;
 export const searchImg = search;
 export const movieImg = movie;
@@ -17,3 +21,7 @@ export const playImg = play;
 export const pauseImg = pause;
 export const heroVideo = hero1;
 export const smallHeroVideo = hero2;
+
+export const facebookImg = facebook;
+export const instagramImg = instagram;
+export const youtubeImg = youtube;

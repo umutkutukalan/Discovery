@@ -3,7 +3,13 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useState } from "react";
-import { heroVideo, smallHeroVideo } from "../utils";
+import {
+  facebookImg,
+  heroVideo,
+  instagramImg,
+  smallHeroVideo,
+  youtubeImg,
+} from "../utils";
 
 const Hero = () => {
   const [videoSrc, setVideoSrc] = useState(
@@ -16,6 +22,25 @@ const Hero = () => {
       duration: 1,
       y: 0,
     });
+    gsap.to("#cta", {
+      opacity: 1,
+      delay: 3,
+      duration: 2,
+      y: 0,
+      stagger: 0.25,
+      ease: "back.inOut",
+    });
+    gsap.to("#social", {
+      opacity: 1,
+      delay: 5,
+      duration: 2,
+      y: 0,
+      stagger: {
+        amount: 1.5,
+        grid: [2, 1],
+      },
+    });
+
     gsap.to("#videoSrc", {
       scrollTrigger: {
         trigger: "#videoSrc",
@@ -41,10 +66,26 @@ const Hero = () => {
   return (
     <section className="relative w-full nav-height overflow-hidden pt-20">
       <div className="h-5/6 w-full flex-center flex-col">
-        <p id="hero" className="hero-title absolute">
-          Discovery
-        </p>
-        <div className="">
+        <div className="absolute flex flex-col items-center">
+          <p id="hero" className="hero-title">
+            Discovery
+          </p>
+          <a id="cta" href="" className="btn opacity-0 translate-y-20">
+            Watch
+          </a>
+          <div id="social" className="flex gap-3 opacity-0 translate-y-20">
+            <button className="socialButton">
+              <img src={facebookImg} alt="facebook" width={15} />
+            </button>
+            <button className="socialButton">
+              <img src={instagramImg} alt="instagram" width={15} />
+            </button>
+            <button className="socialButton">
+              <img src={youtubeImg} alt="youtube" width={15} />
+            </button>
+          </div>
+        </div>
+        <div>
           <video
             className="pointer-events-none"
             id="videoSrc"

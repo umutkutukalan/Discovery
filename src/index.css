@@ -64,6 +64,16 @@ canvas {
   .link {
     @apply text-black hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
   }
+  .btn {
+    @apply bg-black px-5 py-1 my-5 rounded-xl hover:bg-transparent border
+    border-transparent hover:border hover:text-black hover:border-black;
+  }
+  .socialButton {
+    @apply flex flex-center items-center w-7 h-7 bg-white rounded-full transition-all;
+  }
+  .socialButton:hover {
+    @apply bg-gray-200;
+  }
   .inputSearch {
     position: absolute;
     opacity: 0;
