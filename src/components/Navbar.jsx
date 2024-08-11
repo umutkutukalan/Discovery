@@ -3,8 +3,12 @@ import { navLists } from "../constants";
 import { searchImg, worldImg } from "../utils";
 import { handleClick } from "./script";
 const Navbar = () => {
-  
   const navigate = useNavigate();
+
+  const handleHeroClick = () => {
+    navigate("/");
+  };
+
   const handleNavClick = (nav) => {
     if (nav === "Countries") {
       navigate("/highlights");
@@ -24,6 +28,7 @@ const Navbar = () => {
           width={25}
           height={20}
           className="image-hover"
+          onClick={() => handleHeroClick()}
         />
         <div className="flex-center flex-1 max-sm:hidden">
           {navLists.map((nav) => (

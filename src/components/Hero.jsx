@@ -78,7 +78,7 @@ const Hero = () => {
           <p id="hero" className="hero-title">
             Discovery
           </p>
-          <a id="cta" href="" className="btn opacity-0 translate-y-20">
+          <a id="cta" href="/highlights" className="btn opacity-0 translate-y-20">
             Watch
           </a>
           <div id="social" className="flex gap-3 opacity-0 translate-y-20">
