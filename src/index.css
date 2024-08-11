@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+@layer utilities {
+  .image-hover {
+    @apply cursor-pointer;
+    transition: transform 0.3s ease;
+  }
+  .image-hover:hover {
+    @apply scale-90;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  .item {
+    @apply text-sm px-5 transition-all cursor-pointer;
+    color: gray;
+  }
+  .mx-sm-rightButtons {
+    @apply flex max-sm:flex-1 max-sm:justify-end;
+  }
+  .common-padding {
+    @apply sm:py-32 py-20 sm:px-10 px-5;
+  }
+  .section-heading {
+    @apply text-black lg:text-5xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
+  }
+  .link {
+    @apply text-black hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
+  }
+  .video-carousel_container {
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[73vh] sm:h-[60vh] h-[60vh];
+    box-shadow: 5px 15px 35px rgba(0, 0, 0, 0.6);
+    border-radius: 24px;
+  }
+  .control-btn {
+    @apply ml-4 p-4 rounded-full bg-black backdrop-blur flex-center;
+  }
+  .container-task {
+    opacity: 0.5;
+  }
+  .text-border {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    opacity: 0;
+  }
+  .text-padding {
+    @apply sm:pl-2 sm:pb-1 pl-1 pb-1;
+  }
+  @media (max-width: 1200px) {
+    .video-carousel_container {
+      width: 80vw;
+      height: 43vw;
+    }
+    .section-heading {
+      @apply text-4xl;
+    }
+  }
+  @media (min-width: 1200px) {
+    .video-carousel_container {
+      width: 75vw;
+      height: 42vw;
+    }
+  }
+  @media (max-width: 650px) {
+    #country-text {
+      opacity: 0;
+    }
+  }
+  @media (min-width: 430px) and (max-width: 635px) {
+    .section-heading {
+      @apply text-3xl;
+    }
+  }
+  @media (min-width: 300px) and (max-width: 430px) {
+    .section-heading {
+      font-size: 19px;
+    }
+    .link {
+      font-size: 10px;
+    }
+  }
+}
