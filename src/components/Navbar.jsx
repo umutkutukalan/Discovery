@@ -1,12 +1,22 @@
+import { useNavigate } from "react-router-dom";
 import { navLists } from "../constants";
 import { searchImg, worldImg } from "../utils";
 import { handleClick } from "./script";
 const Navbar = () => {
+  
+  const navigate = useNavigate();
+  const handleNavClick = (nav) => {
+    if (nav === "Countries") {
+      navigate("/highlights");
+    } else {
+      console.log(`Navigating ${nav}`);
+    }
+  };
   const handleSearchClick = () => {
     handleClick();
   };
   return (
-    <header className="w-full px-5 py-5 sm:px-10 flex-between">
+    <header className="w-full px-5 py-5 sm:px-10 flex-between navbar">
       <nav className="w-full flex screen-max-width">
         <img
           src={worldImg}
@@ -17,7 +27,11 @@ const Navbar = () => {
         />
         <div className="flex-center flex-1 max-sm:hidden">
           {navLists.map((nav) => (
-            <div key={nav} className="item hover:text-white">
+            <div
+              key={nav}
+              className="item hover:text-white"
+              onClick={() => handleNavClick(nav)}
+            >
               {nav}
             </div>
           ))}

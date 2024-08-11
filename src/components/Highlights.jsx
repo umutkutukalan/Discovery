@@ -3,6 +3,8 @@ import { useGSAP } from "@gsap/react";
 import VideoCarousel from "./VideoCarousel";
 import gsap from "gsap";
 import { historyImg, movieImg } from "../utils";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
   useGSAP(() => {

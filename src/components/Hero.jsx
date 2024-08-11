@@ -16,6 +16,11 @@ const Hero = () => {
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
   useGSAP(() => {
+    gsap.fromTo(
+      "#heroPage",
+      { opacity: 0, y: -50 },
+      { opacity: 1, y: 0, duration: 1 }
+    );
     gsap.to("#hero", {
       opacity: 1,
       delay: 2,
@@ -64,7 +69,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full nav-height overflow-hidden pt-20">
+    <section
+      id="heroPage"
+      className="relative w-full nav-height overflow-hidden pt-20"
+    >
       <div className="h-5/6 w-full flex-center flex-col">
         <div className="absolute flex flex-col items-center">
           <p id="hero" className="hero-title">
@@ -81,7 +89,7 @@ const Hero = () => {
               <img src={instagramImg} alt="instagram" width={15} />
             </button>
             <button className="socialButton">
-              <img src={youtubeImg} alt="youtube" width={15} />
+              <img src={youtubeImg} alt="youtube" width={20} />
             </button>
           </div>
         </div>

@@ -154,4 +154,15 @@ canvas {
       font-size: 10px;
     }
   }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
+  }
+  .main-content {
+    margin-top: 60px; /* Navbar yüksekliğine bağlı olarak ayarlayın */
+  }
 }
