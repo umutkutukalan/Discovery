@@ -1,17 +1,17 @@
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { navLists } from "../constants";
 import { searchImg, worldImg } from "../utils";
 import { handleClick } from "./script";
 const Navbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleHeroClick = () => {
-    navigate("/");
+    window.location.href = "#heroPage";
   };
 
   const handleNavClick = (nav) => {
     if (nav === "Countries") {
-      navigate("/highlights");
+      window.location.href = "#highlights";
     } else {
       console.log(`Navigating ${nav}`);
     }
