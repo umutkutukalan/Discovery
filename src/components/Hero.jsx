@@ -19,6 +19,11 @@ const Hero = () => {
     window.innerWidth < 760 ? smallHeroVideo : heroVideo
   );
   useGSAP(() => {
+    gsap.fromTo(
+      "#heroPage",
+      { opacity: 0, duration: 1 },
+      { opacity: 1, duration: 2, ease: "power2.inOut" }
+    );
     gsap.to("#hero", {
       opacity: 1,
       delay: 3,
@@ -48,6 +53,7 @@ const Hero = () => {
       scrollTrigger: {
         trigger: "#videoSrc",
         toggleActions: "restart none none none",
+        onLeave: () => handlePlay((videoRef.current.muted = false)),
       },
     });
   });
@@ -68,16 +74,15 @@ const Hero = () => {
 
   const handlePlay = () => {
     if (videoRef.current) {
-      if (videoRef.current.muted === false) {
-        videoRef.current.muted = true;
-      } else {
-        videoRef.current.muted = false;
-      }
+      videoRef.current.muted = !videoRef.current.muted;
     }
   };
 
   return (
-    <section className="relative w-full nav-height overflow-hidden pt-20">
+    <section
+      id="heroPage"
+      className="relative w-full nav-height overflow-hidden pt-20 "
+    >
       <div className="h-5/6 w-full flex-center flex-col">
         <div className="absolute flex flex-col items-center">
           <p id="hero" className="hero-title">
@@ -85,7 +90,7 @@ const Hero = () => {
           </p>
           <a
             id="cta"
-            href="highlights"
+            href="#highlights"
             className="btn opacity-0 translate-y-20"
           >
             Watch

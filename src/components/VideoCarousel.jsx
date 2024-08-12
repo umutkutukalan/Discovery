@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 import gsap from "gsap";
-import { pauseImg, playImg, replayImg } from "../utils";
+import { pauseImg, playImg, replayImg, volumeHighImg } from "../utils";
 const VideoCarousel = () => {
   const videoRef = useRef([]);
   const videoSpanRef = useRef([]);
@@ -160,6 +160,11 @@ const VideoCarousel = () => {
         return video;
     }
   };
+  const handlePlayVolume = () => {
+    if (videoRef.current[videoId]) {
+      videoRef.current[videoId].muted = !videoRef.current[videoId].muted;
+    }
+  };
 
   return (
     <>
@@ -201,6 +206,9 @@ const VideoCarousel = () => {
                     </div>
                   ))}
                 </div>
+                <button className="btnVolume" onClick={handlePlayVolume}>
+                  <img src={volumeHighImg} alt="btnVolume" width={20} />
+                </button>
               </div>
             </div>
           </div>

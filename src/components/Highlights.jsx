@@ -8,6 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Highlights = () => {
   useGSAP(() => {
+    gsap.to("#highlights", {
+      scrollTrigger: {
+        trigger: "#highlights",
+        toggleActions: "play pause restart pause",
+      },
+    });
     gsap.to("#title", {
       opacity: 1,
       duration: 1,
