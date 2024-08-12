@@ -11,6 +11,7 @@ import hero2 from "/public/videos/smallHeroVideo.mp4";
 import facebook from "/public/images/facebook.svg";
 import instagram from "/public/images/instagram.svg";
 import youtube from "/public/images/youtube.svg";
+import volumeHigh from "/public/images/volume-high.svg";
 
 export const worldImg = world;
 export const searchImg = search;
@@ -25,3 +26,4 @@ export const smallHeroVideo = hero2;
 export const facebookImg = facebook;
 export const instagramImg = instagram;
 export const youtubeImg = youtube;
+export const volumeHighImg = volumeHigh;

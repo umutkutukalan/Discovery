@@ -68,6 +68,20 @@ canvas {
     @apply bg-black px-5 py-1 my-5 rounded-xl hover:bg-transparent border
     border-transparent hover:border hover:text-black hover:border-black;
   }
+  .btnVolume {
+    @apply bg-black w-7 h-7 rounded-xl hover:bg-transparent border
+    border-transparent hover:border hover:text-black hover:border-black
+    flex flex-center items-center transition-all mb-2 ml-5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  #social {
+    @apply mr-5 mb-2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
   .socialButton {
     @apply flex flex-center items-center w-7 h-7 bg-white rounded-full transition-all;
   }

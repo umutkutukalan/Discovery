@@ -8,10 +8,8 @@ function App() {
     <Router>
       <Navbar />
       <div className="main-content">
-        <Routes>
-          <Route path="/" element={<Hero />}></Route>
-          <Route path="/highlights" element={<Highlights />}></Route>
-        </Routes>
+        <Hero/>
+        <Highlights/>
       </div>
     </Router>
   );
