@@ -56,10 +56,13 @@ canvas {
     @apply flex max-sm:flex-1 max-sm:justify-end;
   }
   .common-padding {
-    @apply sm:pt-20 sm:pb-10 py-10 sm:px-10 px-5;
+    @apply sm:py-32 py-20 sm:px-10 px-5;
   }
   .section-heading {
-    @apply text-black lg:text-5xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
+    @apply text-green-500 lg:text-5xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
+  }
+  .section-heading1 {
+    @apply text-black lg:text-5xl md:text-4xl text-3xl lg:mb-0 mb-5 font-medium;
   }
   .link {
     @apply text-black hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20;
@@ -140,7 +143,8 @@ canvas {
       width: 80vw;
       height: 43vw;
     }
-    .section-heading {
+    .section-heading,
+    .section-heading1 {
       @apply text-4xl;
     }
   }
@@ -156,12 +160,14 @@ canvas {
     }
   }
   @media (min-width: 430px) and (max-width: 635px) {
-    .section-heading {
+    .section-heading,
+    .section-heading1 {
       @apply text-3xl;
     }
   }
   @media (min-width: 300px) and (max-width: 430px) {
-    .section-heading {
+    .section-heading,
+    .section-heading1 {
       font-size: 19px;
     }
     .link {
@@ -178,5 +184,17 @@ canvas {
   }
   .main-content {
     margin-top: 60px; /* Navbar yüksekliğine bağlı olarak ayarlayın */
+  }
+  .feature-video-container {
+    @apply w-full flex flex-col md:flex-row gap-5 items-center;
+  }
+  .feature-video {
+    @apply w-full h-full object-cover object-center scale-150 opacity-0;
+  }
+  .feature-text {
+    @apply text-gray-400 max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px];
+  }
+  .feature-text-container {
+    @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5;
   }
 }

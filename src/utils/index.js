@@ -13,6 +13,10 @@ import instagram from "/public/images/instagram.svg";
 import youtube from "/public/images/youtube.svg";
 import volumeHigh from "/public/images/volume-high.svg";
 
+import exploreVideo1 from "/public/videos/exploreVideo.mp4";
+import image1 from "/public/images/image1.jpg";
+import image2 from "/public/images/image2.jpg";
+
 export const worldImg = world;
 export const searchImg = search;
 export const movieImg = movie;
@@ -27,3 +31,7 @@ export const facebookImg = facebook;
 export const instagramImg = instagram;
 export const youtubeImg = youtube;
 export const volumeHighImg = volumeHigh;
+
+export const exploreVideo = exploreVideo1;
+export const exploreImages1 = image1;
+export const exploreImages2 = image2;
